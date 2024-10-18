@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/nitram509/lib-bpmn-engine/pkg/bpmn_engine/var_holder"
-	"github.com/nitram509/lib-bpmn-engine/pkg/spec/BPMN20"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/bpmn_engine/var_holder"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/spec/BPMN20"
 )
 
 const CurrentSerializerVersion = 1

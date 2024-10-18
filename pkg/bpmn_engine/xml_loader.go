@@ -10,7 +10,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/nitram509/lib-bpmn-engine/pkg/spec/BPMN20"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/spec/BPMN20"
 )
 
 // LoadFromFile loads a given BPMN file by filename into the engine

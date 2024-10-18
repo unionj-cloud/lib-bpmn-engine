@@ -3,7 +3,7 @@ package bpmn_engine
 import (
 	"time"
 
-	"github.com/nitram509/lib-bpmn-engine/pkg/bpmn_engine/var_holder"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/bpmn_engine/var_holder"
 )
 
 // ActivatedJob is a struct to provide information for registered task handler

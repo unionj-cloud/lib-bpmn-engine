@@ -1,6 +1,6 @@
 package BPMN20
 
-import "github.com/nitram509/lib-bpmn-engine/pkg/spec/BPMN20/extensions"
+import "github.com/unionj-cloud/lib-bpmn-engine/pkg/spec/BPMN20/extensions"
 
 type ElementType string
 type GatewayDirection string

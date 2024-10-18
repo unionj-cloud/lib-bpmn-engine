@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nitram509/lib-bpmn-engine/pkg/spec/BPMN20"
 	"github.com/senseyeio/duration"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/spec/BPMN20"
 )
 
 // Timer is created, when a process instance reaches a Timer Intermediate Message Event.

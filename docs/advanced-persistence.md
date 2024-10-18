@@ -22,7 +22,7 @@ For this example, we're just using a simple human task, which is supposed to be 
 ```go
 package main
 
-import "github.com/nitram509/lib-bpmn-engine/pkg/bpmn_engine"
+import "github.com/unionj-cloud/lib-bpmn-engine/pkg/bpmn_engine"
 
 func main() {
 	bpmnEngine := bpmn_engine.New()

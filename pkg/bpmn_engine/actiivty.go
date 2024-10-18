@@ -1,6 +1,6 @@
 package bpmn_engine
 
-import "github.com/nitram509/lib-bpmn-engine/pkg/spec/BPMN20"
+import "github.com/unionj-cloud/lib-bpmn-engine/pkg/spec/BPMN20"
 
 // ActivityState as per BPMN 2.0 spec, section 13.2.2 Activity, page 428
 // State diagram (just partially shown):

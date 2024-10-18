@@ -4,8 +4,8 @@ import (
 	"sort"
 
 	"github.com/bwmarrin/snowflake"
-	"github.com/nitram509/lib-bpmn-engine/pkg/bpmn_engine/exporter"
-	"github.com/nitram509/lib-bpmn-engine/pkg/spec/BPMN20"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/bpmn_engine/exporter"
+	"github.com/unionj-cloud/lib-bpmn-engine/pkg/spec/BPMN20"
 )
 
 type BpmnEngineState struct {
@@ -28,6 +28,10 @@ type ProcessInfo struct {
 	bpmnData         string              // the raw source data, compressed and encoded via ascii85
 	bpmnResourceName string              // some name for the resource
 	bpmnChecksum     [16]byte            // internal checksum to identify different versions
+}
+
+func (processInfo *ProcessInfo) GetDefinitions() BPMN20.TDefinitions {
+	return processInfo.definitions
 }
 
 // ProcessInstances returns the list of process instances

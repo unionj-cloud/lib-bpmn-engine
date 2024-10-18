@@ -102,15 +102,16 @@ type TExclusiveGateway struct {
 }
 
 type TIntermediateCatchEvent struct {
-	Id                     string                  `xml:"id,attr"`
-	Name                   string                  `xml:"name,attr"`
-	IncomingAssociation    []string                `xml:"incoming"`
-	OutgoingAssociation    []string                `xml:"outgoing"`
-	MessageEventDefinition TMessageEventDefinition `xml:"messageEventDefinition"`
-	TimerEventDefinition   TTimerEventDefinition   `xml:"timerEventDefinition"`
-	LinkEventDefinition    TLinkEventDefinition    `xml:"linkEventDefinition"`
-	ParallelMultiple       bool                    `xml:"parallelMultiple"`
-	Output                 []extensions.TIoMapping `xml:"extensionElements>ioMapping>output"`
+	Id                         string                      `xml:"id,attr"`
+	Name                       string                      `xml:"name,attr"`
+	IncomingAssociation        []string                    `xml:"incoming"`
+	OutgoingAssociation        []string                    `xml:"outgoing"`
+	MessageEventDefinition     TMessageEventDefinition     `xml:"messageEventDefinition"`
+	TimerEventDefinition       TTimerEventDefinition       `xml:"timerEventDefinition"`
+	LinkEventDefinition        TLinkEventDefinition        `xml:"linkEventDefinition"`
+	ConditionalEventDefinition TConditionalEventDefinition `xml:"conditionalEventDefinition"`
+	ParallelMultiple           bool                        `xml:"parallelMultiple"`
+	Output                     []extensions.TIoMapping     `xml:"extensionElements>ioMapping>output"`
 }
 
 type TIntermediateThrowEvent struct {
@@ -141,6 +142,11 @@ type TTimerEventDefinition struct {
 type TLinkEventDefinition struct {
 	Id   string `xml:"id,attr"`
 	Name string `xml:"name,attr"`
+}
+
+type TConditionalEventDefinition struct {
+	Id        string        `xml:"id,attr"`
+	Condition []TExpression `xml:"condition"`
 }
 
 type TMessage struct {

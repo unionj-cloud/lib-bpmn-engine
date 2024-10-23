@@ -165,6 +165,10 @@ func (userTask TUserTask) GetAssignmentAssignee() string {
 	return userTask.AssignmentDefinition.Assignee
 }
 
+func (userTask TUserTask) GetAssignee() string {
+	return userTask.Assignee
+}
+
 func (userTask TUserTask) GetAssignmentCandidateGroups() []string {
 	return userTask.AssignmentDefinition.GetCandidateGroups()
 }

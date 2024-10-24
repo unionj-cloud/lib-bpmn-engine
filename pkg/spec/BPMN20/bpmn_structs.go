@@ -81,6 +81,8 @@ type TUserTask struct {
 	Id                   string                           `xml:"id,attr"`
 	Name                 string                           `xml:"name,attr"`
 	Assignee             string                           `xml:"assignee,attr"`
+	CandidateUsers       string                           `xml:"candidateUsers,attr"`
+	CandidateGroups      string                           `xml:"candidateGroups,attr"`
 	IncomingAssociation  []string                         `xml:"incoming"`
 	OutgoingAssociation  []string                         `xml:"outgoing"`
 	Input                []extensions.TIoMapping          `xml:"extensionElements>ioMapping>input"`

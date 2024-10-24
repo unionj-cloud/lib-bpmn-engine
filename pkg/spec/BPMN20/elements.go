@@ -40,6 +40,9 @@ type TaskElement interface {
 	GetTaskDefinitionType() string
 	GetAssignmentAssignee() string
 	GetAssignmentCandidateGroups() []string
+	GetAssignee() string
+	GetCandidateUsers() string
+	GetCandidateGroups() string
 }
 
 type GatewayElement interface {
@@ -167,6 +170,14 @@ func (userTask TUserTask) GetAssignmentAssignee() string {
 
 func (userTask TUserTask) GetAssignee() string {
 	return userTask.Assignee
+}
+
+func (userTask TUserTask) GetCandidateUsers() string {
+	return userTask.CandidateUsers
+}
+
+func (userTask TUserTask) GetCandidateGroups() string {
+	return userTask.CandidateGroups
 }
 
 func (userTask TUserTask) GetAssignmentCandidateGroups() []string {

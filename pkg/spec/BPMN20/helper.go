@@ -2,6 +2,7 @@ package BPMN20
 
 import (
 	"html"
+	"slices"
 	"strings"
 )
 
@@ -28,8 +29,12 @@ func FindFirstSequenceFlow(sequenceFlows *[]TSequenceFlow, sourceId string, targ
 }
 
 func FindBaseElementsById(definitions *TDefinitions, id string) (elements []*BaseElement) {
+	return FindBaseElementsByIds(definitions, []string{id})
+}
+
+func FindBaseElementsByIds(definitions *TDefinitions, ids []string) (elements []*BaseElement) {
 	appender := func(element *BaseElement) {
-		if (*element).GetId() == id {
+		if slices.Contains(ids, (*element).GetId()) {
 			elements = append(elements, element)
 		}
 	}

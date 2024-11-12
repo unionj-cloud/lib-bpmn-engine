@@ -115,6 +115,7 @@ type TIntermediateCatchEvent struct {
 	ConditionalEventDefinition TConditionalEventDefinition `xml:"conditionalEventDefinition"`
 	ParallelMultiple           bool                        `xml:"parallelMultiple"`
 	Output                     []extensions.TIoMapping     `xml:"extensionElements>ioMapping>output"`
+	FormButtonEventDefinition  *EFormButtonEventDefinition  `xml:"extensionElements>formButtonEventDefinition"`
 }
 
 type TIntermediateThrowEvent struct {
@@ -150,6 +151,13 @@ type TLinkEventDefinition struct {
 type TConditionalEventDefinition struct {
 	Id        string        `xml:"id,attr"`
 	Condition []TExpression `xml:"condition"`
+}
+
+// E stands for extension
+type EFormButtonEventDefinition struct {
+	CandidateGroups string `xml:"candidateGroups,attr"`
+	OpenForm        bool   `xml:"openForm,attr"`
+	OpenConfirm     bool   `xml:"openConfirm,attr"`
 }
 
 type TMessage struct {

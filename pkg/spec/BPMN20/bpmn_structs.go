@@ -158,7 +158,7 @@ type EFormButtonEventDefinition struct {
 	CandidateGroups string `xml:"candidateGroups,attr"`
 	OpenForm        bool   `xml:"openForm,attr"`
 	OpenConfirm     bool   `xml:"openConfirm,attr"`
-	FormCode        string `xml:"formCode,attr"`
+	FormKey         string `xml:"formKey,attr"`
 }
 
 type TMessage struct {
